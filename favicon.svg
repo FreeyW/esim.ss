@@ -17,6 +17,4 @@
   <!-- gold chip -->
   <rect x="22" y="28" width="20" height="16" rx="3.5" fill="url(#chip)"/>
   <path d="M22 36 h20 M28.5 28 v16 M35.5 28 v16" stroke="#8a5a10" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
-  <!-- signal dot -->
-  <circle cx="45" cy="51" r="2.6" fill="#0092f2"/>
 </svg>
