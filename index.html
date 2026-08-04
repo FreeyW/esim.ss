@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eSIM 实体卡与中国 eSIM 流量套餐推荐（2026 实测）· esim.ss</title>
+  <meta name="description" content="2026 年 eSIM 转实体卡横评：ESTK、9eSIM、XeSIM、BeeSIM 参数对比与优惠码；中国大陆可用 eSIM 流量套餐（esim.cc / BNESIM / Stellar）实测推荐；低成本海外保号卡与国行 iPhone 写卡教程。">
+  <meta name="keywords" content="eSIM 实体卡, eSIM 转实体卡, ESTK, 9eSIM, XeSIM, BeeSIM, 中国 eSIM 流量, esim.cc, BNESIM, Stellar, 保号卡, Club SIM, Ultra Mobile, 国行 iPhone eSIM">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://esim.ss/">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="esim.ss">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://esim.ss/">
+  <meta property="og:title" content="eSIM 实体卡与中国 eSIM 流量套餐推荐（2026 实测）">
+  <meta property="og:description" content="ESTK / 9eSIM / XeSIM / BeeSIM 参数对比与优惠码；中国可用 eSIM 流量套餐与海外保号卡推荐；国行 iPhone 写卡教程。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="eSIM 实体卡与中国 eSIM 流量套餐推荐 · esim.ss">
+  <meta name="twitter:description" content="eSIM 转实体卡横评 + 中国大陆可用流量套餐 + 保号卡 + 教程，一页看完。">
+
+  <!-- Open Props -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1/open-props.min.css">
+
+  <!-- DM Sans / DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800;9..40,900&display=swap">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "esim.ss",
+    "url": "https://esim.ss/",
+    "inLanguage": "zh-CN",
+    "description": "eSIM 转实体卡横评、中国大陆可用 eSIM 流量套餐推荐、海外保号卡与 eSIM 使用教程。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "eSIM 转实体卡推荐榜单",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "9eSIM（V0 / V0 Max / V3）", "url": "https://esim.ss/#cards"},
+      {"@type": "ListItem", "position": 2, "name": "XeSIM（X1 / X2 / X2 Pro）", "url": "https://esim.ss/#cards"},
+      {"@type": "ListItem", "position": 3, "name": "BeeSIM V1", "url": "https://esim.ss/#cards"},
+      {"@type": "ListItem", "position": 4, "name": "ESTK（C / Plus+ / Max）", "url": "https://esim.ss/#cards"}
+    ]
+  }
+  </script>
+
+  <style>
+  /*  Base  */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    color: var(--gray-9, #1f2937);
+    line-height: 1.65;
+    background: #f4f4f5;
+    background-image:
+      radial-gradient(900px 520px at 8% -10%, rgba(24, 24, 27, .07), transparent 60%),
+      radial-gradient(800px 500px at 96% 4%, rgba(113, 113, 122, .09), transparent 55%),
+      radial-gradient(760px 560px at 50% 110%, rgba(161, 161, 170, .12), transparent 60%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gray-10, #111827); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { line-height: 1.28; margin: 0 0 var(--size-3, 12px); font-weight: 800; letter-spacing: -0.01em; }
+  p { margin: 0 0 var(--size-3, 12px); }
+  strong { color: var(--gray-10, #111827); }
+  :focus-visible { outline: 3px solid var(--gray-8, #343a40); outline-offset: 2px; border-radius: 4px; }
+  .wrap { max-width: 1120px; margin-inline: auto; padding-inline: var(--size-4, 16px); }
+
+  /*  Glass  */
+  .glass {
+    background: rgba(255, 255, 255, .72);
+    border: 1px solid rgba(255, 255, 255, .85);
+    border-radius: var(--radius-3, 18px);
+    box-shadow: 0 12px 34px rgba(30, 41, 90, .10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /*  Header / nav  */
+  .site-head {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(148, 163, 184, .25);
+  }
+  .site-head .bar {
+    display: flex; align-items: center; gap: var(--size-4, 16px);
+    height: 60px;
+  }
+  .logo { font-size: 20px; font-weight: 900; letter-spacing: -.02em; color: var(--gray-10, #0f172a); }
+  .logo .dot-ss { color: var(--gray-5, #9ca3af); }
+  .main-nav { margin-left: auto; display: flex; gap: 4px; overflow-x: auto; }
+  .main-nav a {
+    white-space: nowrap; padding: 8px 14px; border-radius: var(--radius-round, 999px);
+    font-size: 14px; font-weight: 600; color: var(--gray-8, #334155);
+  }
+  .main-nav a:hover { background: rgba(24, 24, 27, .07); text-decoration: none; }
+  .main-nav a.active { background: var(--gray-10, #0f172a); color: #fff; }
+
+  /*  Hero  */
+  .hero { padding: clamp(48px, 8vw, 88px) 0 clamp(28px, 5vw, 48px); text-align: center; }
+  .hero h1 { font-size: clamp(28px, 4.4vw, 46px); max-width: 21em; margin-inline: auto; }
+  .hero h1 em { font-style: normal; background: linear-gradient(100deg, #09090b, #52525b 55%, #a1a1aa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .sub { max-width: 44em; margin: 0 auto var(--size-5, 20px); color: var(--gray-7, #475569); font-size: clamp(15px, 1.6vw, 17px); }
+  .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: var(--radius-round, 999px);
+    font-weight: 700; font-size: 15px; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-2px); }
+  .btn-dark { background: var(--gray-10, #0f172a); color: #fff; box-shadow: 0 8px 22px rgba(15, 23, 42, .28); }
+  .btn-ghost { background: rgba(255,255,255,.8); color: var(--gray-9, #1e293b); border: 1px solid rgba(148,163,184,.4); }
+
+  /*  Sections  */
+  section { padding: clamp(36px, 6vw, 64px) 0; }
+  .sec-head { max-width: 46em; margin-bottom: clamp(20px, 3.5vw, 34px); }
+  .sec-tag {
+    display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: 3px;
+    font-family: "DM Mono", ui-monospace, Menlo, monospace;
+    color: var(--gray-6, #52525b); text-transform: uppercase; margin-bottom: 8px;
+  }
+  .sec-head h2 { font-size: clamp(22px, 3vw, 32px); }
+  .sec-head p { color: var(--gray-7, #475569); }
+
+  /*  Product cards  */
+  .product-grid {
+    display: grid; gap: var(--size-5, 22px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  }
+  .product { padding: var(--size-4, 18px); display: flex; flex-direction: column; transition: transform .2s ease, box-shadow .2s ease; }
+  .product:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(30, 41, 90, .16); }
+  .product h3 { font-size: 19px; margin: 14px 0 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .product .desc { font-size: 14px; color: var(--gray-7, #475569); margin-bottom: 12px; }
+
+  .badge {
+    font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: var(--radius-round, 999px);
+    letter-spacing: .3px;
+  }
+  .badge-new { background: rgba(16, 185, 129, .14); color: #047857; }
+  .badge-val { background: rgba(24, 24, 27, .08); color: #3f3f46; }
+
+  /* ───── SIM card visuals ───── */
+  .sim-visual {
+    width: 100%; aspect-ratio: 1.586; border-radius: 18px;
+    padding: 20px; color: #fff; position: relative; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(30, 30, 70, 0.25);
+  }
+  .sim-visual::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(420px 200px at 80% -20%, rgba(255, 255, 255, 0.28), transparent 60%);
+    pointer-events: none;
+  }
+  .sim-chip {
+    width: 44px; height: 34px; border-radius: 7px;
+    background: linear-gradient(135deg, #f8e08e, #d9a441);
+    position: relative; margin-top: 16px;
+  }
+  .sim-chip::before {
+    content: ""; position: absolute; inset: 5px 8px;
+    border: 1.5px solid rgba(110, 70, 0, 0.4); border-radius: 4px;
+  }
+  .sim-chip::after {
+    content: ""; position: absolute; top: 50%; left: 0; right: 0;
+    border-top: 1.5px solid rgba(110, 70, 0, 0.4);
+  }
+  .sim-brand { font-size: 20px; font-weight: 800; letter-spacing: 0.5px; }
+  .sim-sub { font-size: 12px; opacity: 0.85; }
+  .sim-bottom {
+    position: absolute; left: 20px; right: 20px; bottom: 16px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    font-size: 12px; opacity: 0.9;
+  }
+  .sim-notch {
+    position: absolute; top: 14px; right: 16px; text-align: right;
+    font-size: 11px; letter-spacing: 2px; opacity: 0.75; font-weight: 600;
+  }
+
+  .g-estk   {
+    background: linear-gradient(135deg, #d4d4d8 0%, #ececee 55%, #ffffff 135%);
+    color: #18181b; border: 1px solid #d4d4d8;
+    box-shadow: 0 10px 30px rgba(24, 24, 27, 0.14);
+  }
+  .g-estk::after { background: radial-gradient(420px 200px at 80% -20%, rgba(255, 255, 255, 0.85), transparent 60%); }
+  .g-9esim  { background: linear-gradient(135deg, #7a1206 0%, #f4331c 60%, #ff8d75 145%); }
+  .g-beesim { background: linear-gradient(135deg, #000000 0%, #17171a 55%, #3d3d44 135%); }
+  .g-xesim  { background: linear-gradient(135deg, #7c2d12 0%, #ea580c 60%, #fdba74 145%); }
+  .g-planb  { background: linear-gradient(135deg, #c2410c 0%, #f97c50 60%, #fdba8f 140%); }
+  .g-trip   { background: linear-gradient(135deg, #12355c 0%, #2867b2 70%, #4aa3f0 140%); }
+  .g-esimcc { background: linear-gradient(135deg, #004e82 0%, #0092f2 60%, #6cc4ff 140%); }
+  .g-redtea { background: linear-gradient(135deg, #450a0a 0%, #b91c1c 60%, #f87171 140%); }
+  .g-stellar{ background: linear-gradient(135deg, #12308f 0%, #2761fc 60%, #82a4ff 140%); }
+  .g-mo     { background: linear-gradient(135deg, #003a75 0%, #1063c4 60%, #58a6ff 140%); }
+
+  /* ───── Spec list ───── */
+  .spec-list { border-top: 1px dashed rgba(148, 163, 184, .45); margin-top: auto; font-size: 13.5px; }
+  .spec-list .row {
+    display: flex; justify-content: space-between; gap: 14px;
+    padding: 7px 0; border-bottom: 1px dashed rgba(148, 163, 184, .35);
+  }
+  .spec-list .k { color: var(--gray-6, #64748b); white-space: nowrap; }
+  .spec-list .v { text-align: right; font-weight: 600; color: var(--gray-9, #1e293b); }
+
+  /* ───── Coupon row ───── */
+  .coupon {
+    margin-top: 14px; padding: 10px 14px; border-radius: var(--radius-2, 12px);
+    background: linear-gradient(92deg, #fff7ed, #fef3c7); border: 1px dashed rgba(24, 24, 27, .3);
+    font-size: 13.5px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+  }
+  .code {
+    display: inline-block;
+    font-family: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 500; background: #fff; border: 1px solid rgba(24, 24, 27, .35);
+    padding: 2px 10px; border-radius: 6px; cursor: pointer; user-select: all;
+    color: var(--gray-10, #111827); white-space: nowrap;
+  }
+  .code:hover { background: rgba(24, 24, 27, .07); }
+  .coupon a { margin-left: auto; font-weight: 700; }
+
+  /*  Tables  */
+  .table-hint { font-size: 12px; color: var(--gray-6, #64748b); margin: 18px 0 8px; display: none; }
+  .table-wrap { overflow-x: auto; padding: 6px; margin-top: 26px; }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+  th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid rgba(148, 163, 184, .28); vertical-align: top; }
+  thead th {
+    font-size: 13px; letter-spacing: .5px; color: var(--gray-6, #64748b);
+    border-bottom: 2px solid rgba(100, 116, 139, .4); white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(24, 24, 27, .035); }
+  td.good { color: #047857; font-weight: 700; }
+  td .code { font-size: 12.5px; padding: 1px 8px; margin: 0 2px; }
+  td .go { font-weight: 700; white-space: nowrap; }
+
+  /*  Plan cards（流量 / 保号） */
+  .plan-grid {
+    display: grid; gap: var(--size-5, 22px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  }
+  .plan-card { padding: var(--size-5, 22px); display: flex; flex-direction: column; }
+  .plan-card .head { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
+  .plan-card h3 { font-size: 18px; margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .plan-card .tagline { font-size: 12.5px; color: var(--gray-6, #64748b); }
+  .plan-card .dot {
+    flex: none; width: 44px; height: 44px; border-radius: 12px; color: #fff;
+    display: grid; place-items: center; font-size: 20px;
+    box-shadow: 0 6px 16px rgba(30, 30, 70, .25);
+  }
+  .plan-card ul { margin: 0 0 4px; padding-left: 0; list-style: none; font-size: 14px; flex: 1; }
+  .plan-card li { padding: 6px 0 6px 22px; position: relative; border-bottom: 1px dashed rgba(148, 163, 184, .3); }
+  .plan-card li:last-child { border-bottom: none; }
+  .plan-card li::before { content: "✓"; position: absolute; left: 2px; color: #059669; font-weight: 800; }
+  .g-club  { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+  .g-ultra { background: linear-gradient(135deg, #5b21b6, #8b5cf6); }
+  .g-3hk   { background: linear-gradient(135deg, #9a3412, #f97316); }
+  .g-sosim { background: linear-gradient(135deg, #be123c, #fb7185); }
+  .g-cuniq { background: linear-gradient(135deg, #b91c1c, #ef4444); }
+
+  .verdict {
+    margin-top: 26px; padding: 18px 22px; font-size: 15px;
+    border-left: 4px solid var(--gray-10, #18181b);
+  }
+
+  /* ───── 选购指南卡 ───── */
+  .pick-guide { justify-content: flex-start; }
+  .pick-guide h3 { margin-top: 4px; }
+  .pick-guide .pick-list { list-style: none; margin: 4px 0 0; padding: 0; font-size: 14px; }
+  .pick-guide .pick-list li {
+    padding: 10px 0; border-bottom: 1px dashed rgba(148, 163, 184, .4);
+  }
+  .pick-guide .pick-list li:last-child { border-bottom: none; }
+  .pick-guide .who {
+    display: block; font-weight: 800; margin-bottom: 2px; color: var(--gray-10, #111827);
+  }
+  .pick-guide .why { color: var(--gray-7, #475569); font-size: 13.5px; }
+  .verdict a { text-decoration: underline; text-underline-offset: 3px; }
+  .note { font-size: 12.5px; color: var(--gray-6, #64748b); margin-top: 14px; }
+  .coupon-hub { padding: 20px 22px; }
+  .coupon-hub h3 { font-size: 17px; }
+  .coupon-hub p { font-size: 14.5px; color: var(--gray-7, #475569); }
+
+  /*  Guide  */
+  .guide-grid {
+    display: grid; gap: var(--size-5, 22px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  }
+  .guide-card { padding: var(--size-5, 24px); }
+  .guide-card h3 { font-size: 18px; }
+  .guide-card > p { font-size: 13.5px; color: var(--gray-6, #64748b); }
+  .steps { list-style: none; counter-reset: step; margin: 14px 0 0; padding: 0; }
+  .steps li { counter-increment: step; position: relative; padding: 0 0 16px 44px; }
+  .steps li:last-child { padding-bottom: 0; }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 13px; font-weight: 800; color: #fff;
+    background: linear-gradient(135deg, #18181b, #52525b);
+    box-shadow: 0 4px 10px rgba(24, 24, 27, .3);
+  }
+  .steps li:not(:last-child)::after {
+    content: ""; position: absolute; left: 13.5px; top: 30px; bottom: 2px;
+    border-left: 2px dashed rgba(113, 113, 122, .4);
+  }
+  .steps .st { display: block; font-weight: 700; font-size: 14.5px; }
+  .steps .sd { display: block; font-size: 13.5px; color: var(--gray-7, #475569); }
+  .steps code {
+    font-family: "DM Mono", ui-monospace, Menlo, monospace; font-size: 12.5px;
+    background: rgba(15, 23, 42, .06); padding: 1px 6px; border-radius: 5px;
+  }
+
+  /*  Footer  */
+  .site-foot {
+    margin-top: 30px; padding: 34px 0 44px;
+    border-top: 1px solid rgba(148, 163, 184, .3);
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(10px);
+  }
+  .site-foot .cols { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
+  .site-foot .disclaimer { font-size: 12.5px; color: var(--gray-6, #64748b); max-width: 46em; }
+  .site-foot nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13.5px; }
+
+  /*  Responsive & a11y  */
+  @media (max-width: 760px) {
+    .table-hint { display: block; }
+    .hero h1 { font-size: 26px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .product, .btn { transition: none; }
+  }
+  </style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="esim.ss 首页">esim<span class="dot-ss">.ss</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#cards">eSIM 实体卡</a>
+      <a href="#plans">eSIM 流量套餐</a>
+      <a href="#number">eSIM 保号卡</a>
+      <a href="#guide">eSIM 教程</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!--  Hero  -->
+  <div class="hero wrap">
+    <h1>一张卡装下全世界：<em>eSIM 实体卡</em>与<em>中国可用流量套餐</em>实测推荐</h1>
+    <p class="sub">国行手机没有 eSIM？把 eSIM 写进实体卡即可。本站横评 4 款主流 eSIM 转实体卡、3 个中国大陆可用的 eSIM 流量套餐，以及低成本长期持有海外号码的保号卡方案，附完整上手教程与独家优惠码。</p>
+    <div class="hero-cta">
+      <a class="btn btn-dark" href="#cards">查看实体卡对比 →</a>
+      <a class="btn btn-ghost" href="#plans">中国流量套餐</a>
+    </div>
+  </div>
+
+  <!--  eSIM 实体卡  -->
+  <section id="cards">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Physical eSIM Cards</span>
+        <h2>eSIM 转实体卡：4 款主流卡横评</h2>
+        <p>eSIM 转实体卡（可复写 eUICC 卡）能把任意 eSIM Profile 写入一张普通尺寸的 SIM 卡，让国行 iPhone、无 eSIM 功能的安卓机也能自由使用 eSIM 套餐。以下 4 款按生态、容量、易用性各有侧重。</p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- 9eSIM -->
+        <article class="glass product">
+          <div class="sim-visual g-9esim">
+            <div class="sim-notch">OPEN·eUICC</div>
+            <div class="sim-brand">9eSIM</div>
+            <div class="sim-sub">V0 / V0 Max / V3</div>
+            <div class="sim-chip"></div>
+            <div class="sim-bottom"><span>480K – 1.5M</span><span>Kigen OS · 开源 LPA</span></div>
+          </div>
+          <h3>9eSIM <span class="badge badge-new">容量性价比</span></h3>
+          <p class="desc">主打开放 eUICC 标准、无账号绑定。LPA 软件栈开源，兼容 NekokoLPA、OpenEUICC、MiniLPA 等社区工具；STK 菜单秒切 Profile。旗舰 V3 采用 Kigen OS（英国制造），兼容 1000+ eSIM 服务商，V0 Max / V3 附赠 1GB 全球流量。</p>
+          <div class="spec-list">
+            <div class="row"><span class="k">型号 / 容量</span><span class="v">V0 480KB · V0 Max 1.1MB · V3 1.5MB</span></div>
+            <div class="row"><span class="k">可存 Profile</span><span class="v">15 / 30 / 50 个 · 不限写入</span></div>
+            <div class="row"><span class="k">管理方式</span><span class="v">STK / Android App / 开源 LPA</span></div>
+            <div class="row"><span class="k">参考价</span><span class="v">约 ¥91 / ¥122 / ¥146</span></div>
+          </div>
+          <div class="coupon">🎟 9 折优惠码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span><a href="https://to.cm/9esim" target="_blank" rel="noopener sponsored">直达链接 →</a></div>
+        </article>
+
+        <!-- XeSIM -->
+        <article class="glass product">
+          <div class="sim-visual g-xesim">
+            <div class="sim-notch">GSMA·CERT</div>
+            <div class="sim-brand">XeSIM</div>
+            <div class="sim-sub">X1 / X2 / X2 Pro</div>
+            <div class="sim-chip"></div>
+            <div class="sim-bottom"><span>15 – 30 Profiles</span><span>iOS · Android · 鸿蒙</span></div>
+          </div>
+          <h3>XeSIM <span class="badge badge-val">iPhone 开箱即用</span></h3>
+          <p class="desc">内置 GSMA 认证证书，App 覆盖 Android、iOS、HarmonyOS NEXT 三大系统。X2 Pro 纯 iPhone 也能独立完成写卡（免借安卓机），并附带 SeedLink。X1 为入门款（限 5 次下载），X2 起不限次写入。</p>
+          <div class="spec-list">
+            <div class="row"><span class="k">型号</span><span class="v">X1（5 次）· X2 · X2 Pro（免安卓）</span></div>
+            <div class="row"><span class="k">可存 Profile</span><span class="v">15 / 30 个</span></div>
+            <div class="row"><span class="k">管理方式</span><span class="v">三系统 App / STK 菜单</span></div>
+            <div class="row"><span class="k">参考价</span><span class="v">约 ¥91 / ¥175 / ¥219</span></div>
+          </div>
+          <div class="coupon">🎟 9 折优惠码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span><a href="https://to.cm/xesim" target="_blank" rel="noopener sponsored">直达链接 →</a></div>
+        </article>
+
+        <!-- BeeSIM -->
+        <article class="glass product">
+          <div class="sim-visual g-beesim">
+            <div class="sim-notch">BLE·INSIDE</div>
+            <div class="sim-brand">BeeSIM</div>
+            <div class="sim-sub">V1 · 蓝牙直连</div>
+            <div class="sim-chip"></div>
+            <div class="sim-bottom"><span>340 – 380KB</span><span>200+ 国家地区</span></div>
+          </div>
+          <h3>BeeSIM <span class="badge badge-new">蓝牙黑科技</span> <span class="badge badge-val">iPhone 开箱即用</span></h3>
+          <p class="desc">卡内直接集成低功耗蓝牙芯片——不走 STK、不需要读卡器，手机通过蓝牙（微信小程序 / App）就能写入和管理 eSIM，对 iPhone 用户操作最直观。低功耗设计几乎不影响续航，覆盖 200+ 国家和地区。</p>
+          <div class="spec-list">
+            <div class="row"><span class="k">型号 / 容量</span><span class="v">V1 · 340~380KB 可用</span></div>
+            <div class="row"><span class="k">可存 Profile</span><span class="v">约 8 – 9 个（按 40KB/个）</span></div>
+            <div class="row"><span class="k">管理方式</span><span class="v">蓝牙 + 微信小程序 / App</span></div>
+            <div class="row"><span class="k">参考价</span><span class="v">¥109</span></div>
+          </div>
+          <div class="coupon">🎟 淘宝优惠码 <span class="code" role="button" tabindex="0" title="点击复制">33250100</span><a href="https://s.tb.cn/c.0xs2qV" target="_blank" rel="noopener sponsored">直达链接 →</a></div>
+        </article>
+
+        <!-- ESTK -->
+        <article class="glass product">
+          <div class="sim-visual g-estk">
+            <div class="sim-notch">ESTK·ME</div>
+            <div class="sim-brand">ESTK</div>
+            <div class="sim-sub">C / Plus+ / Max</div>
+            <div class="sim-chip"></div>
+            <div class="sim-bottom"><span>512K – 1600K</span><span>5G SA · SoftSIM</span></div>
+          </div>
+          <h3>ESTK <span class="badge badge-new">生态最全</span> <span class="badge badge-val">iPhone 开箱即用</span></h3>
+          <p class="desc">老牌 eSIM 实体卡，生态最完整：STK 菜单直接切换（iPhone 友好），官方 App 之外还兼容 lpac、OpenEUICC 等开源工具，配套读卡器可在电脑上管理。iOS 可直接下载 Profile，支持 5G SA。</p>
+          <div class="spec-list">
+            <div class="row"><span class="k">型号 / 容量</span><span class="v">C 512KiB · Plus+ 1024KiB · Max 1600KiB</span></div>
+            <div class="row"><span class="k">可存 Profile</span><span class="v">约 13 – 60 个 · 不限写入</span></div>
+            <div class="row"><span class="k">管理方式</span><span class="v">STK / 开源 LPA / App / 读卡器</span></div>
+            <div class="row"><span class="k">参考价</span><span class="v">约 ¥61–173</span></div>
+          </div>
+          <div class="coupon">🎟 9 折优惠码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span><a href="https://to.cm/estk" target="_blank" rel="noopener sponsored">直达链接 →</a></div>
+        </article>
+
+        <!-- 选购指南 -->
+        <article class="glass product pick-guide">
+          <h3>🧭 eSIM 实体卡怎么选？</h3>
+          <ul class="pick-list">
+            <li><span class="who">国行 iPhone 用户</span><span class="why">ESTK（STK 直切 + iOS 直接下载）或 XeSIM X2 Pro（免安卓写卡）、BeeSIM（蓝牙全程）。</span></li>
+            <li><span class="who">安卓玩家 / 折腾党</span><span class="why">9eSIM 开源生态最自由，V3 的 Kigen OS 切卡最快。</span></li>
+            <li><span class="who">要大容量多号</span><span class="why">ESTK Max（60 个）或 9eSIM V3（50 个）。</span></li>
+            <li><span class="who">预算有限先试水</span><span class="why">9eSIM V0（约 ¥102）或 XeSIM X1（约 ¥102）。</span></li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+      <div class="glass table-wrap">
+        <table>
+          <caption class="visually-hidden" style="position:absolute;left:-9999px;">eSIM 实体卡参数对比表</caption>
+          <thead>
+            <tr><th>参数</th><th>9eSIM</th><th>XeSIM</th><th>BeeSIM</th><th>ESTK</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>型号</strong></td><td>V0 / V0 Max / V3</td><td>X1 / X2 / X2 Pro</td><td>V1</td><td>C / Plus+ / Max</td></tr>
+            <tr><td><strong>参考价</strong></td><td>约 ¥102–163</td><td>约 ¥102–245</td><td>¥99</td><td>约 ¥61–173</td></tr>
+            <tr><td><strong>存储容量</strong></td><td class="good">480KB–1.5MB</td><td>—</td><td>340–380KB</td><td class="good">512KiB–1600KiB</td></tr>
+            <tr><td><strong>Profile 上限</strong></td><td class="good">15 / 30 / 50</td><td>15 / 30</td><td>8–9</td><td class="good">最高 60（Max）</td></tr>
+            <tr><td><strong>下载次数</strong></td><td class="good">不限</td><td>X1 限 5 次，X2 起不限</td><td>—</td><td class="good">不限</td></tr>
+            <tr><td><strong>切换方式</strong></td><td>STK / Android App</td><td>STK / 官方 App</td><td>蓝牙 + 微信小程序</td><td class="good">STK / 开源 LPA / 读卡器</td></tr>
+            <tr><td><strong>iPhone 友好度</strong></td><td>中（管理需读卡器或 STK）</td><td class="good">X2 Pro 高（免安卓）</td><td class="good">高（小程序全程）</td><td class="good">高（STK 直切 + iOS 直接下载）</td></tr>
+            <tr><td><strong>App / 生态</strong></td><td class="good">开源 LPA（NekokoLPA / MiniLPA）</td><td>Android / iOS / 鸿蒙</td><td>仅微信小程序 / App</td><td class="good">官方App + 开源（lpac / OpenEUICC）</td></tr>
+            <tr><td><strong>特色</strong></td><td>V0 Max / V3 送 1GB 流量</td><td>X2 Pro 含 SeedLink</td><td>官网自营 eSIM 商城</td><td>5G SA · SoftSIM</td></tr>
+            <tr>
+              <td><strong>优惠</strong></td>
+              <td class="good">9 折码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span> <a class="go" href="https://to.cm/9esim" target="_blank" rel="noopener sponsored">直达 →</a></td>
+              <td class="good">9 折码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span> <a class="go" href="https://to.cm/xesim" target="_blank" rel="noopener sponsored">直达 →</a></td>
+              <td class="good">优惠码 <span class="code" role="button" tabindex="0" title="点击复制">33250100</span> <a class="go" href="https://s.tb.cn/c.0xs2qV" target="_blank" rel="noopener sponsored">直达 →</a></td>
+              <td class="good">9 折码 <span class="code" role="button" tabindex="0" title="点击复制">YHM</span> <a class="go" href="https://to.cm/estk" target="_blank" rel="noopener sponsored">直达 →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!--  流量套餐  -->
+  <section id="plans">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">China Data Plans</span>
+        <h2>中国大陆 eSIM 流量套餐对比</h2>
+        <p>这类漫游套餐经国际出口回传，Google / ChatGPT 直接可用，无需 VPN、无需中国实名。写进上面的实体卡后，国行手机也能随时切换。</p>
+      </div>
+
+      <div class="plan-grid">
+
+        <!-- esim.cc -->
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-esimcc" aria-hidden="true">🐬</div>
+            <div><h3>esim.cc 年卡 <span class="badge badge-val">长期主力</span></h3><div class="tagline">国内支付友好</div></div>
+          </div>
+          <ul>
+            <li>100GB / 365 天，官网约 <strong>¥339</strong></li>
+            <li>使用 9 折码后约 <strong>¥305</strong></li>
+            <li>支持支付宝、银联及常见银行卡</li>
+            <li>中国移动 4/5G，ChatGPT / Claude 可用</li>
+            <li>用户实测 NSA 5G 可达 100Mbps+；部分线路国内应用经香港、国际服务经新加坡</li>
+          </ul>
+          <div class="coupon">🎟 9 折码 <span class="code" role="button" tabindex="0" title="点击复制">9999</span><a href="https://to.cm/esimcc" target="_blank" rel="noopener sponsored">中国套餐链接 →</a></div>
+        </article>
+
+        <!-- BNESIM -->
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-planb" aria-hidden="true">♾️</div>
+            <div><h3>BNESIM <span class="badge badge-new">永不过期</span></h3><div class="tagline">防失联备用</div></div>
+          </div>
+          <ul>
+            <li>提供<strong>永不过期</strong>流量类型，用多少扣多少</li>
+            <li>100GB 永不过期套餐官网约 ¥388，用码后约 <strong>¥310</strong></li>
+            <li>无需中国实名，适合长期备用</li>
+            <li>中国移动 5G；ChatGPT / TikTok 可用</li>
+            <li>部分线路经香港 / 新加坡出口，实际 IP 以分配为准</li>
+          </ul>
+          <div class="coupon">🎟 8 折码 <span class="code" role="button" tabindex="0" title="点击复制">CN20OFF</span><a href="https://to.cm/bnesim" target="_blank" rel="noopener sponsored">中国套餐链接 →</a></div>
+        </article>
+
+        <!-- Stellar -->
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-stellar" aria-hidden="true">⚡</div>
+            <div><h3>Stellar <span class="badge badge-new">超高性价比</span></h3><div class="tagline">小流量随买随用</div></div>
+          </div>
+          <ul>
+            <li>中国 3GB / 30 天套餐仅 <strong>€0.54 ≈ ¥4.2</strong></li>
+            <li>大流量需求：50GB / 30 天仅 <strong>€11.22 ≈ ¥87</strong></li>
+            <li>无需中国实名，适合随买随用</li>
+            <li>中国移动 5G；ChatGPT / TikTok 可用</li>
+            <li>部分线路经香港 / 新加坡出口，实际 IP 以分配为准</li>
+          </ul>
+          <div class="coupon">✅ 无需优惠码<a href="https://to.cm/rsss" target="_blank" rel="noopener sponsored">中国套餐链接 →</a></div>
+        </article>
+
+      </div>
+
+      <div class="glass verdict">
+        <strong>一句话总结：</strong>长期主力使用选 <a href="https://to.cm/esimcc" target="_blank" rel="noopener sponsored"><strong>esim.cc 100GB 年卡</strong></a>；短期小流量 <a href="https://to.cm/rsss" target="_blank" rel="noopener sponsored"><strong>Stellar</strong></a> 更有性价比；防失联备用选 <a href="https://to.cm/bnesim" target="_blank" rel="noopener sponsored"><strong>BNESIM 永不过期套餐</strong></a>。搭配上面的 eSIM 实体卡，国行手机也能随时切换。
+      </div>
+    </div>
+  </section>
+
+  <!--  保号卡  -->
+  <section id="number">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Keep Number</span>
+        <h2>eSIM 保号：低成本长期持有海外号码</h2>
+        <p>保号卡指月租极低甚至零月租、可在中国大陆长期漫游收短信的海外 SIM/eSIM。用途：注册验证 WhatsApp / Telegram / Google、接收境外银行验证码、保留一个真实海外手机号。核心指标是<strong>年持有成本、保号动作、eSIM 支持、大陆漫游收短信是否免费</strong>。数据采集于 2026 年 7 月，政策变动频繁，办卡前务必核实官网。</p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-club" aria-hidden="true">🇭🇰</div>
+            <div><h3>Club SIM <span class="badge badge-val">年成本最低</span></h3><div class="tagline">香港 csl（HKT 系）</div></div>
+          </div>
+          <ul>
+            <li>一年 <strong>HK$6（≈¥5.6）</strong>保留 852 号码</li>
+            <li>大陆漫游免费收短信</li>
+            <li>eSIM 开卡 HK$50 起，远程可办</li>
+            <li>港股券商、港区 App Store 实用</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.theclub.com.hk/" target="_blank" rel="noopener">Club SIM 官网 →</a></div>
+        </article>
+
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-ultra" aria-hidden="true">🇺🇸</div>
+            <div><h3>Ultra PayGo <span class="badge badge-val">美国号首选</span></h3><div class="tagline">美国 T-Mobile ·「紫卡」</div></div>
+          </div>
+          <ul>
+            <li><strong>$3/月（≈¥20）</strong>含 100 分钟 + 100 短信 + 100MB</li>
+            <li>真实美国号，可做 Google Voice 载体</li>
+            <li>支持 WiFi Calling，大陆可接打</li>
+            <li>可自助转 eSIM 版</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.ultramobile.com/paygo/" target="_blank" rel="noopener">Ultra Mobile 官网 →</a></div>
+        </article>
+
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-3hk" aria-hidden="true">🇭🇰</div>
+            <div><h3>3HK DIY 储值卡 <span class="badge badge-new">灵活自选</span></h3><div class="tagline">香港和记电讯</div></div>
+          </div>
+          <ul>
+            <li>纯保号 <strong>HK$36/年（≈¥33）</strong></li>
+            <li>HK$120/年 档含 12GB 本地 + 12GB 社交流量</li>
+            <li>大牌运营商，支持 eSIM</li>
+            <li>保号与流量可分开购买</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.three.com.hk/" target="_blank" rel="noopener">3HK 官网 →</a></div>
+        </article>
+
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-sosim" aria-hidden="true">🇭🇰</div>
+            <div><h3>SoSIM <span class="badge badge-new">流量+保号兼顾</span></h3><div class="tagline">香港 3HK 旗下储值卡</div></div>
+          </div>
+          <ul>
+            <li>买卡 <strong>HK$33</strong> 即含首月 50GB 本地流量 + 1500 分钟</li>
+            <li>年保号成本 ≤HK$40</li>
+            <li>开卡 48 小时内可免费转漫游</li>
+            <li>香港百佳 / 屈臣氏有售，支持 eSIM</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.sosim.hk/" target="_blank" rel="noopener">SoSIM 官网 →</a></div>
+        </article>
+
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-cuniq" aria-hidden="true">🇭🇰</div>
+            <div><h3>Cuniq 月神卡 <span class="badge badge-new">一卡双号</span></h3><div class="tagline">中国联通（香港）</div></div>
+          </div>
+          <ul>
+            <li><strong>¥9/月（年 ¥108）</strong>，港号 + 内地副号</li>
+            <li>一次解决「海外号 + 内地号」两个需求</li>
+            <li>联通体系，充值客服对内地友好</li>
+            <li>支持 eSIM；实名要求较高</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.cuniq.com/" target="_blank" rel="noopener">Cuniq 官网 →</a></div>
+        </article>
+
+        <article class="glass plan-card">
+          <div class="head">
+            <div class="dot g-mo" aria-hidden="true">🇲🇴</div>
+            <div><h3>澳门电信蓝卡 <span class="badge badge-val">三地通用</span> <span class="badge badge-new">零月租</span></h3><div class="tagline">中国电信（澳门）· 大湾区预付卡</div></div>
+          </div>
+          <ul>
+            <li><strong>零月租</strong>，没有固定月租费，接收短信免费</li>
+            <li>流量在中国内地、香港、澳门<strong>三地共用</strong></li>
+            <li>流量用不完<strong>永不过期</strong></li>
+            <li>每年仅需 <strong>¥20</strong> 保号，拥有澳门 +853 号码</li>
+          </ul>
+          <div class="coupon">🌐 <a href="https://www.1888.com.mo/home/index/" target="_blank" rel="noopener">澳门电信 官网 →</a></div>
+        </article>
+      </div>
+
+      <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+      <div class="glass table-wrap">
+        <table>
+          <thead>
+            <tr><th>卡</th><th>号码归属</th><th>年持有成本</th><th>保号动作</th><th>eSIM</th><th>大陆收短信</th><th>适合谁</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>🇭🇰 Club SIM</strong></td><td>香港 +852</td><td class="good">HK$6（≈¥5.6）</td><td>缴极低年费</td><td class="good">✅</td><td class="good">免费收</td><td>只要一个能收码的港号</td></tr>
+            <tr><td><strong>🇭🇰 3HK DIY</strong></td><td>香港 +852</td><td>HK$36（≈¥33）</td><td>年费套餐</td><td class="good">✅</td><td class="good">可收</td><td>要港号 + 可选流量</td></tr>
+            <tr><td><strong>🇭🇰 SoSIM</strong></td><td>香港 +852</td><td>≤HK$40</td><td>按期充值</td><td class="good">✅</td><td class="good">可收</td><td>去港旅游顺便办卡</td></tr>
+            <tr><td><strong>🇺🇸 Ultra PayGo</strong></td><td>美国 +1</td><td>$36（≈¥260）</td><td>保持余额自动扣月费</td><td class="good">✅</td><td class="good">含 100 条/月</td><td>要真实美国号（GV 转移、通话）</td></tr>
+            <tr><td><strong>🇭🇰 Cuniq 月神卡</strong></td><td>香港 + 内地双号</td><td>¥108</td><td>月租自动扣</td><td class="good">✅</td><td class="good">双号可收</td><td>要港号 + 内地副号一步到位</td></tr>
+            <tr><td><strong>🇲🇴 澳门电信蓝卡</strong></td><td>澳门 +853</td><td class="good">¥20</td><td>年充 ¥20</td><td>—（以官网为准）</td><td class="good">免费收</td><td>常往大湾区 + 要流量永不过期</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">* 数据采集于 2026 年 7 月官网与社区教程。收短信属正常国际漫游业务，但运营商可能清理长期漫游用户（如 Giffgaff 2026 年的动作），实名 / 地址要求各不相同，请以官网最新条款为准。</p>
+
+      <div class="glass coupon-hub" style="margin-top:32px;">
+        <h3>💡 保号卡和 eSIM 实体卡是什么关系？</h3>
+        <p style="margin-bottom:0;">互补关系：保号卡是<strong>号码</strong>（低成本持有海外手机号），实体卡是<strong>容器</strong>（让不支持 eSIM 的手机能装 eSIM）。手机不支持 eSIM 时，可把 Giffgaff / Club SIM 的 eSIM 版下载到 eSTK、9eSIM 这类实体卡里，一张卡装下所有保号号码。</p>
+      </div>
+    </div>
+  </section>
+
+  <!--  教程  -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">How-to Guide</span>
+        <h2>eSIM 使用教程</h2>
+        <p>从第一次写卡到落地激活，四份速查教程覆盖最常见的使用场景。</p>
+      </div>
+
+      <div class="guide-grid">
+
+        <article class="glass guide-card">
+          <h3>第一次用实体卡：通用写卡流程</h3>
+          <p>五步走，全程约 10 分钟，各品牌大同小异。</p>
+          <ol class="steps">
+            <li><span class="st">选卡并插入手机</span><span class="sd">按「参数对比」表挑一张适合你手机的卡，像普通 SIM 卡一样插入卡槽。</span></li>
+            <li><span class="st">安装管理工具</span><span class="sd">各家不同：官方 App（XeSIM 等）、开源 LPA（9eSIM / ESTK 可用 NekokoLPA、MiniLPA 等）、微信小程序（BeeSIM）。</span></li>
+            <li><span class="st">购买 eSIM 套餐</span><span class="sd">在流量平台下单后会拿到激活二维码或 <code>LPA:1$…</code> 格式的激活码。</span></li>
+            <li><span class="st">写入 Profile</span><span class="sd">在管理工具里扫码或粘贴激活码，把 Profile 下载到卡里（此时手机需要另一路网络，如 Wi-Fi）。</span></li>
+            <li><span class="st">启用并联网</span><span class="sd">选中刚写入的 Profile 启用，在系统设置里打开蜂窝数据和数据漫游即可上网。</span></li>
+          </ol>
+        </article>
+
+        <article class="glass guide-card">
+          <h3>国行 iPhone 玩法要点</h3>
+          <p>国行 iPhone 的 eSIM 被禁用但卡槽正常，装不了安卓 App，三条路任选。</p>
+          <ol class="steps">
+            <li><span class="st">STK 菜单切换（最通用）</span><span class="sd">ESTK / 9eSIM / XeSIM 都支持：插卡后在「设置 → 蜂窝网络 → SIM 卡应用程序」里就能看到卡片菜单，直接切换 Profile，不需要任何 App。</span></li>
+            <li><span class="st">蓝牙管理（最直观）</span><span class="sd">BeeSIM 内置蓝牙芯片，微信小程序连卡即可写入、切换，全程 iPhone 完成。</span></li>
+            <li><span class="st">免安卓写卡</span><span class="sd">XeSIM X2 Pro 支持纯 iPhone 独立写卡；ESTK 也可借配套读卡器在电脑上写。其余卡型首次写入时借一台安卓机最省事。</span></li>
+          </ol>
+        </article>
+
+        <article class="glass guide-card">
+          <h3>流量套餐：购买与激活</h3>
+          <p>以中国大陆漫游套餐为例，出发前就能全部备好。</p>
+          <ol class="steps">
+            <li><span class="st">提前购买</span><span class="sd">对比 esim.cc、Superalink、BNESIM 后下单（注意激活时限与购买资格，如 esim.cc 需在购买后 90 天内激活）。</span></li>
+            <li><span class="st">提前写入</span><span class="sd">拿到二维码就可以把 Profile 装进手机或实体卡，不会立即计费——多数套餐首次连上当地网络才开始计时。</span></li>
+            <li><span class="st">落地启用</span><span class="sd">到达后启用对应 Profile、打开数据漫游，几分钟内自动注册上网。</span></li>
+            <li><span class="st">直连国际网络</span><span class="sd">这类漫游套餐经国际出口回传，Google / ChatGPT 直接可用，无需 VPN，也无需实名。</span></li>
+            <li><span class="st">热点共享</span><span class="sd">以套餐页实时规则为准；esim.cc 支持热点，Superalink 当前为每天最多共享 2GB。</span></li>
+          </ol>
+        </article>
+
+        <article class="glass guide-card">
+          <h3>eSIM 保号卡：留一个海外号码</h3>
+          <p>注册 WhatsApp / Telegram、接收境外验证码，都需要一个长期海外号。</p>
+          <ol class="steps">
+            <li><span class="st">选号码归属地</span><span class="sd">只要收码选港号（Club SIM 年费最低）；要真实美国号选 Ultra Mobile PayGo。</span></li>
+            <li><span class="st">eSIM 版下载到实体卡</span><span class="sd">手机不支持 eSIM 时，把保号卡的 eSIM 版写入 eSTK / 9eSIM 等实体卡，一张卡装下所有号码。</span></li>
+            <li><span class="st">记住保号动作</span><span class="sd">各家不同：缴年费、定期充值或半年一次余额变动，错过会被回收号码。</span></li>
+          </ol>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap cols">
+    <div>
+      <div class="logo" style="margin-bottom:8px;">esim<span class="dot-ss">.ss</span></div>
+      <p class="disclaimer">本站为独立评测网站，与上述任何品牌无隶属关系；所有商标归各自所有者。购买链接含本站推广/优惠标识。</p>
+      <p class="disclaimer">© 2026 esim.ss · 内容仅供参考，价格与政策以各官网实时信息为准。</p>
+    </div>
+    <nav aria-label="页脚导航">
+      <a href="#cards">eSIM 实体卡</a>
+      <a href="#plans">eSIM 流量套餐</a>
+      <a href="#number">eSIM 保号卡</a>
+      <a href="#guide">eSIM 教程</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// 点击优惠码复制
+document.querySelectorAll('.code').forEach(el => {
+  const copy = () => {
+    const txt = el.textContent.trim();
+    (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
+      .catch(() => { /* 剪贴板不可用时保持可手动选择 */ })
+      .finally(() => {
+        const old = el.textContent;
+        el.textContent = '已复制 ✓';
+        setTimeout(() => { el.textContent = old; }, 1200);
+      });
+  };
+  el.addEventListener('click', copy);
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); } });
+});
+
+// 滚动高亮当前导航
+const navLinks = [...document.querySelectorAll('.main-nav a')];
+const sections = navLinks.map(a => document.querySelector(a.getAttribute('href')));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => s && io.observe(s));
+</script>
+
+</body>
+</html>

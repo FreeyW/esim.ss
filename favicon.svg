@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#27272a"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8e08e"/>
+      <stop offset="1" stop-color="#d9a441"/>
+    </linearGradient>
+  </defs>
+  <!-- tile -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- SIM card body with notched corner -->
+  <path d="M18 10 h20 l8 8 v36 a4 4 0 0 1 -4 4 H18 a4 4 0 0 1 -4 -4 V14 a4 4 0 0 1 4 -4 Z"
+        fill="#f4f4f5" stroke="#a1a1aa" stroke-width="1.5"/>
+  <!-- gold chip -->
+  <rect x="22" y="28" width="20" height="16" rx="3.5" fill="url(#chip)"/>
+  <path d="M22 36 h20 M28.5 28 v16 M35.5 28 v16" stroke="#8a5a10" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
+  <!-- signal dot -->
+  <circle cx="45" cy="51" r="2.6" fill="#0092f2"/>
+</svg>
