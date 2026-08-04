@@ -116,7 +116,7 @@
   /*  Hero  */
   .hero { padding: clamp(48px, 8vw, 88px) 0 clamp(28px, 5vw, 48px); text-align: center; }
   .hero h1 { font-size: clamp(28px, 4.4vw, 46px); max-width: 21em; margin-inline: auto; }
-  .hero h1 em { font-style: normal; background: linear-gradient(100deg, #09090b, #52525b 55%, #a1a1aa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero h1 em { font-style: normal; background: linear-gradient(100deg, #f59e0b, #f43f5e 45%, #7c3aed); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
   .hero .sub { max-width: 44em; margin: 0 auto var(--size-5, 20px); color: var(--gray-7, #475569); font-size: clamp(15px, 1.6vw, 17px); }
   .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn {
@@ -166,18 +166,29 @@
     background: radial-gradient(420px 200px at 80% -20%, rgba(255, 255, 255, 0.28), transparent 60%);
     pointer-events: none;
   }
+  /* 芯片样式与 favicon.svg 中的金色 SIM 芯片保持一致 */
   .sim-chip {
-    width: 44px; height: 34px; border-radius: 7px;
+    width: 44px; height: 35px; border-radius: 7.5px;
     background: linear-gradient(135deg, #f8e08e, #d9a441);
-    position: relative; margin-top: 16px;
+    position: relative; margin-top: 16px; overflow: hidden;
   }
+  /* 一条贯穿的横线 + 两条贯穿的竖线，把触点分成 6 格（同 favicon 比例） */
   .sim-chip::before {
-    content: ""; position: absolute; inset: 5px 8px;
-    border: 1.5px solid rgba(110, 70, 0, 0.4); border-radius: 4px;
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(to right,
+        transparent 0, transparent calc(32.5% - 0.9px),
+        rgba(138, 90, 16, 0.55) calc(32.5% - 0.9px), rgba(138, 90, 16, 0.55) calc(32.5% + 0.9px),
+        transparent calc(32.5% + 0.9px), transparent 100%),
+      linear-gradient(to right,
+        transparent 0, transparent calc(67.5% - 0.9px),
+        rgba(138, 90, 16, 0.55) calc(67.5% - 0.9px), rgba(138, 90, 16, 0.55) calc(67.5% + 0.9px),
+        transparent calc(67.5% + 0.9px), transparent 100%);
   }
   .sim-chip::after {
     content: ""; position: absolute; top: 50%; left: 0; right: 0;
-    border-top: 1.5px solid rgba(110, 70, 0, 0.4);
+    height: 1.8px; transform: translateY(-50%);
+    background: rgba(138, 90, 16, 0.55);
   }
   .sim-brand { font-size: 20px; font-weight: 800; letter-spacing: 0.5px; }
   .sim-sub { font-size: 12px; opacity: 0.85; }
@@ -349,7 +360,7 @@
 
 <header class="site-head">
   <div class="wrap bar">
-    <a class="logo" href="#top" aria-label="esim.ss 首页">esim<span class="dot-ss">.ss</span></a>
+    <a class="logo" href="#top" aria-label="eSIM.SS 首页">eSIM<span class="dot-ss">.SS</span></a>
     <nav class="main-nav" aria-label="主导航">
       <a href="#cards">eSIM 实体卡</a>
       <a href="#plans">eSIM 流量套餐</a>
@@ -756,7 +767,7 @@
 <footer class="site-foot">
   <div class="wrap cols">
     <div>
-      <div class="logo" style="margin-bottom:8px;">esim<span class="dot-ss">.ss</span></div>
+      <div class="logo" style="margin-bottom:8px;">eSIM<span class="dot-ss">.SS</span></div>
       <p class="disclaimer">本站为独立评测网站，与上述任何品牌无隶属关系；所有商标归各自所有者。购买链接含本站推广/优惠标识。</p>
       <p class="disclaimer">© 2026 esim.ss · 内容仅供参考，价格与政策以各官网实时信息为准。</p>
     </div>
