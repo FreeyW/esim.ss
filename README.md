@@ -269,7 +269,6 @@ esim.ss 做三件事：
 | **5G SA** | 5G 独立组网 |
 
 ---
-```
 
 内容有更新、价格有变动、发现失效链接，欢迎提 [Issue](https://github.com/FreeyW/esim.ss/issues) 或 PR。觉得有用的话，点个 ⭐ Star 让更多人看到。
 
