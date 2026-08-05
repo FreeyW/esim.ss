@@ -257,6 +257,28 @@
   td.good { color: #047857; font-weight: 700; }
   td .code { font-size: 12.5px; padding: 1px 8px; margin: 0 2px; }
   td .go { font-weight: 700; white-space: nowrap; }
+  td.muted, .muted { color: var(--gray-6, #64748b); font-weight: 400; }
+
+  /*  Tabs（套餐价格表）  */
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .tab-btn {
+    font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;
+    padding: 9px 16px; border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, .5);
+    background: rgba(255, 255, 255, .6); color: var(--gray-7, #475569);
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .tab-btn:hover { background: rgba(24, 24, 27, .06); }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #18181b, #52525b);
+    border-color: transparent; color: #fff;
+    box-shadow: 0 4px 12px rgba(24, 24, 27, .25);
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .tab-panel .table-wrap { margin-top: 14px; }
+  .tab-panel .table-hint { margin: 14px 0 0; }
+  .panel-note { font-size: 13px; color: var(--gray-7, #475569); margin: 12px 2px 0; }
 
   /*  Plan cards（流量 / 保号） */
   .plan-grid {
@@ -586,6 +608,102 @@
       <div class="glass verdict">
         <strong>一句话总结：</strong>长期主力使用选 <a href="https://to.cm/esimcc" target="_blank" rel="noopener sponsored"><strong>esim.cc 100GB 年卡</strong></a>；短期小流量 <a href="https://to.cm/rsss" target="_blank" rel="noopener sponsored"><strong>Stellar</strong></a> 更有性价比；防失联备用选 <a href="https://to.cm/bnesim" target="_blank" rel="noopener sponsored"><strong>BNESIM 永不过期套餐</strong></a>。搭配上面的 eSIM 实体卡，国行手机也能随时切换。
       </div>
+
+      <!--  三家详细价格表 + 横向对比  -->
+      <div class="tabs" role="tablist" aria-label="流量套餐价格表">
+        <button class="tab-btn active" data-tab="esimcc" role="tab" aria-selected="true" aria-controls="tab-esimcc">esim.cc</button>
+        <button class="tab-btn" data-tab="bnesim" role="tab" aria-selected="false" aria-controls="tab-bnesim">BNESIM</button>
+        <button class="tab-btn" data-tab="stellar" role="tab" aria-selected="false" aria-controls="tab-stellar">Stellar</button>
+        <button class="tab-btn" data-tab="cmp" role="tab" aria-selected="false" aria-controls="tab-cmp">⚖️ 横向对比</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-esimcc" role="tabpanel">
+        <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+        <div class="glass table-wrap">
+          <table>
+            <thead><tr><th>套餐</th><th>流量</th><th>有效期</th><th>官网价</th><th>9 折后</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td><strong>定额 · 1GB</strong></td><td>1GB</td><td>30 天</td><td>约 ¥11</td><td class="good">约 ¥10</td><td>USD 1.60</td></tr>
+              <tr><td><strong>定额 · 3GB</strong></td><td>3GB</td><td>30 天</td><td>约 ¥26</td><td class="good">约 ¥24</td><td>USD 3.90</td></tr>
+              <tr><td><strong>定额 · 5GB</strong></td><td>5GB</td><td>30 天</td><td>约 ¥33</td><td class="good">约 ¥30</td><td>USD 4.90</td></tr>
+              <tr><td><strong>定额 · 10GB</strong></td><td>10GB</td><td>30 天</td><td>约 ¥39</td><td class="good">约 ¥35</td><td>USD 5.80</td></tr>
+              <tr><td><strong>定额 · 30GB</strong></td><td>30GB</td><td>90 天</td><td>约 ¥119</td><td class="good">约 ¥107</td><td>USD 17.50</td></tr>
+              <tr><td><strong>定额 · 50GB</strong></td><td>50GB</td><td>180 天</td><td>约 ¥176</td><td class="good">约 ¥158</td><td>USD 25.90</td></tr>
+              <tr><td><strong>定额 · 100GB</strong></td><td>100GB</td><td>365 天</td><td>约 ¥339</td><td class="good">约 ¥305</td><td>USD 49.90</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="panel-note">✅ 中国移动 4/5G · 日票每天 2GB 高速后降至 128kbps · 定额套餐覆盖 30–365 天 · 支持热点 · 购买后 90 天内激活 · 9 折码 <span class="code" role="button" tabindex="0" title="点击复制">9999</span> <a class="go" href="https://to.cm/esimcc" target="_blank" rel="noopener sponsored">直达 →</a></p>
+      </div>
+
+      <div class="tab-panel" id="tab-bnesim" role="tabpanel">
+        <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+        <div class="glass table-wrap">
+          <table>
+            <thead><tr><th>套餐</th><th>流量</th><th>有效期</th><th>官网价</th><th>8 折后</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td><strong>永不过期 · 1GB</strong></td><td>1GB</td><td>永不过期</td><td>约 ¥23 <span class="muted">(€2.99)</span></td><td class="good">约 ¥19</td><td>轻量备用</td></tr>
+              <tr><td><strong>永不过期 · 3GB</strong></td><td>3GB</td><td>永不过期</td><td>约 ¥31 <span class="muted">(€3.99)</span></td><td class="good">约 ¥25</td><td>—</td></tr>
+              <tr><td><strong>永不过期 · 5GB</strong></td><td>5GB</td><td>永不过期</td><td>约 ¥43 <span class="muted">(€5.49)</span></td><td class="good">约 ¥34</td><td>—</td></tr>
+              <tr><td><strong>永不过期 · 10GB</strong></td><td>10GB</td><td>永不过期</td><td>约 ¥58 <span class="muted">(€7.49)</span></td><td class="good">约 ¥47</td><td>—</td></tr>
+              <tr><td><strong>永不过期 · 20GB</strong></td><td>20GB</td><td>永不过期</td><td>约 ¥93 <span class="muted">(€11.99)</span></td><td class="good">约 ¥75</td><td>—</td></tr>
+              <tr><td><strong>永不过期 · 50GB</strong></td><td>50GB</td><td>永不过期</td><td>约 ¥194 <span class="muted">(€24.99)</span></td><td class="good">约 ¥156</td><td>长期备用首选</td></tr>
+              <tr><td><strong>永不过期 · 100GB</strong></td><td>100GB</td><td>永不过期</td><td>约 ¥389 <span class="muted">(€49.99)</span></td><td class="good">约 ¥311</td><td>大容量备用</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="panel-note">✅ 同一页面可选 30 天限期套餐或永不过期套餐 · 官网以欧元计价 · 8 折码 <span class="code" role="button" tabindex="0" title="点击复制">CN20OFF</span> <a class="go" href="https://to.cm/bnesim" target="_blank" rel="noopener sponsored">直达 →</a>。折后人民币价格按 8 折直接估算，实际是否适用及结算金额以下单页为准。</p>
+      </div>
+
+      <div class="tab-panel" id="tab-stellar" role="tabpanel">
+        <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+        <div class="glass table-wrap">
+          <table>
+            <thead><tr><th>套餐</th><th>流量</th><th>有效期</th><th>官网价</th><th>约合人民币</th><th>单价</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td><strong>定额 · 50GB 半年</strong></td><td>50GB</td><td>180 天</td><td>€18.50</td><td>约 ¥144</td><td>€0.37 / GB</td><td>比 30 天版多 6 倍时长，仅贵 €7.28</td></tr>
+              <tr><td><strong>定额 · 50GB</strong></td><td>50GB</td><td>30 天</td><td>€11.22</td><td class="good">约 ¥87</td><td class="good">€0.22 / GB</td><td>50GB 月度性价比之选</td></tr>
+              <tr><td><strong>定额 · 20GB</strong></td><td>20GB</td><td>30 天</td><td>€5.27</td><td>约 ¥41</td><td>€0.26 / GB</td><td>—</td></tr>
+              <tr><td><strong>定额 · 10GB</strong></td><td>10GB</td><td>30 天</td><td>€3.02</td><td>约 ¥24</td><td>€0.30 / GB</td><td>—</td></tr>
+              <tr><td><strong>定额 · 5GB</strong></td><td>5GB</td><td>30 天</td><td>€1.65</td><td>约 ¥13</td><td>€0.33 / GB</td><td>—</td></tr>
+              <tr><td><strong>定额 · 3GB</strong></td><td>3GB</td><td>30 天</td><td>€0.54</td><td class="good">约 ¥4.2</td><td class="good">€0.18 / GB</td><td>超值推荐，仅需 4.2 元</td></tr>
+              <tr><td><strong>定额 · 3GB 半月</strong></td><td>3GB</td><td>15 天</td><td>€1.05</td><td>约 ¥8.2</td><td>€0.35 / GB</td><td>比 30 天版更贵，不建议</td></tr>
+              <tr><td><strong>定额 · 1GB</strong></td><td>1GB</td><td>7 天</td><td>€0.65</td><td>约 ¥5.1</td><td>€0.65 / GB</td><td>短途应急</td></tr>
+              <tr><td><strong>定额 · 500MB</strong></td><td>500MB</td><td>7 天</td><td>€0.74</td><td>约 ¥5.8</td><td>€1.48 / GB</td><td>单价最高，不建议</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="panel-note">✅ 中国移动 4/5G · 支持热点 · 定额按总量扣除 · 购买后 180 天内激活 · 免费赠送 Stellar VPN · 无需优惠码 <a class="go" href="https://to.cm/rsss" target="_blank" rel="noopener sponsored">直达 →</a>。人民币为按 €1 ≈ ¥7.8 估算，实际以支付时汇率为准；注意 3GB / 30 天比 3GB / 15 天更便宜，下单前逐档对比单价。</p>
+      </div>
+
+      <div class="tab-panel" id="tab-cmp" role="tabpanel">
+        <div class="table-hint">👈 表格可左右滑动查看更多列</div>
+        <div class="glass table-wrap">
+          <table>
+            <thead><tr><th>维度</th><th>esim.cc</th><th>BNESIM</th><th>Stellar</th></tr></thead>
+            <tbody>
+              <tr><td><strong>最低门槛</strong></td><td>1GB / 30 天，9 折后约 ¥10</td><td>限期 1GB / 30 天，8 折后约 ¥16</td><td class="good">3GB / 30 天，约 ¥4.2</td></tr>
+              <tr><td><strong>最低单 GB 价</strong></td><td>约 ¥3.1 / GB（100GB 年卡）</td><td>约 ¥3.1 / GB（50GB 永不过期）</td><td class="good">约 ¥1.4 / GB（3GB / 30 天）</td></tr>
+              <tr><td><strong>套餐结构</strong></td><td>日票 2GB/天 + 1–100GB 定额</td><td>30 天限期 + 永不过期两类</td><td>500MB–50GB 定额，7 / 15 / 30 / 180 天</td></tr>
+              <tr><td><strong>短期大流量</strong></td><td>7 天共 14GB 高速，9 折后约 ¥86</td><td>50GB / 30 天，8 折后约 ¥124</td><td class="good">50GB / 30 天，约 ¥87</td></tr>
+              <tr><td><strong>长期 / 防失联</strong></td><td class="good">100GB / 365 天，9 折后约 ¥305</td><td class="good">50GB 永不过期，8 折后约 ¥156</td><td>50GB / 180 天，约 ¥144</td></tr>
+              <tr><td><strong>超量规则</strong></td><td>日票每天 2GB 后降至 128kbps</td><td>定额按总量扣除；另有 10 天不限量档</td><td>定额按总量扣除</td></tr>
+              <tr><td><strong>激活 / 有效期</strong></td><td>购买后 90 天内激活；最长 365 天</td><td>可选 30 天或永不过期</td><td>购买后 180 天内激活；7–180 天</td></tr>
+              <tr><td><strong>网络与热点</strong></td><td>中国移动 4/5G；支持热点</td><td>官方套餐页未标明运营商与热点限制</td><td>中国移动 4/5G；支持热点</td></tr>
+              <tr><td><strong>附加权益</strong></td><td>—</td><td>—</td><td class="good">免费赠送 Stellar VPN</td></tr>
+              <tr><td><strong>优惠</strong></td><td>9 折码 <span class="code" role="button" tabindex="0" title="点击复制">9999</span></td><td>8 折码 <span class="code" role="button" tabindex="0" title="点击复制">CN20OFF</span></td><td>无需优惠码，原价即最低</td></tr>
+              <tr><td><strong>购买限制</strong></td><td>官网未见大陆居民购买限制</td><td>官网未见大陆居民购买限制</td><td>官网未见大陆居民购买限制</td></tr>
+              <tr>
+                <td><strong>下单</strong></td>
+                <td class="good"><a class="go" href="https://to.cm/esimcc" target="_blank" rel="noopener sponsored">直达 →</a></td>
+                <td class="good"><a class="go" href="https://to.cm/bnesim" target="_blank" rel="noopener sponsored">直达 →</a></td>
+                <td class="good"><a class="go" href="https://to.cm/rsss" target="_blank" rel="noopener sponsored">直达 →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="panel-note">💡 只买一次、量不大 → Stellar；每月稳定用、要国内支付顺畅 → esim.cc；只做防失联备用、怕套餐过期 → BNESIM 永不过期。</p>
+      </div>
     </div>
   </section>
 
@@ -801,6 +919,22 @@ document.querySelectorAll('.code').forEach(el => {
   };
   el.addEventListener('click', copy);
   el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); copy(); } });
+});
+
+// 套餐价格表 Tab 切换
+document.querySelectorAll('.tabs').forEach(tabs => {
+  const btns = [...tabs.querySelectorAll('.tab-btn')];
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', String(on));
+        const panel = document.getElementById('tab-' + b.dataset.tab);
+        if (panel) panel.classList.toggle('active', on);
+      });
+    });
+  });
 });
 
 // 滚动高亮当前导航
