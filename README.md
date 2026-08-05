@@ -269,26 +269,6 @@ esim.ss 做三件事：
 | **5G SA** | 5G 独立组网 |
 
 ---
-
-## 仓库结构与本地预览
-
-```
-.
-├── index.html          # 站点单页：实体卡横评 / 流量套餐 / 保号卡 / 教程
-├── open-props.min.css  # Open Props 设计变量（本地托管，避免外链）
-├── favicon.svg         # 站点图标
-└── README.md           # 本文件（内容存档 + 说明）
-```
-
-技术栈：**纯静态单页**，无构建步骤、无 JS 框架依赖；样式基于 [Open Props](https://open-props.style/) 变量 + 内联 CSS，含 Open Graph、Twitter Card 与 `WebSite` / `ItemList` JSON-LD 结构化数据。
-
-本地预览：
-
-```bash
-git clone https://github.com/FreeyW/esim.ss.git
-cd esim.ss
-python3 -m http.server 8000
-# 浏览器打开 http://localhost:8000
 ```
 
 内容有更新、价格有变动、发现失效链接，欢迎提 [Issue](https://github.com/FreeyW/esim.ss/issues) 或 PR。觉得有用的话，点个 ⭐ Star 让更多人看到。
