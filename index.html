@@ -91,6 +91,43 @@
     -webkit-backdrop-filter: blur(14px);
   }
 
+  /*  顶部通栏 banner  */
+  .top-banner {
+    display: block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 12px 16px;
+    background: linear-gradient(100deg, #f59e0b, #f43f5e 45%, #7c3aed);
+    background-size: 200% 100%;
+    animation: banner-shift 12s ease-in-out infinite alternate;
+    box-shadow: 0 6px 20px rgba(124, 58, 237, .28);
+  }
+  .top-banner:hover { text-decoration: none; filter: brightness(1.06); }
+  .top-banner .banner-inner {
+    display: flex; align-items: center; justify-content: center;
+    flex-wrap: wrap; gap: 6px 10px;
+  }
+  .top-banner .banner-tag {
+    font-size: 11px; font-weight: 800; letter-spacing: 2px;
+    font-family: "DM Mono", ui-monospace, Menlo, monospace;
+    text-transform: uppercase;
+    padding: 3px 9px; border-radius: var(--radius-round, 999px);
+    background: rgba(255, 255, 255, .22);
+    border: 1px solid rgba(255, 255, 255, .38);
+    white-space: nowrap;
+  }
+  .top-banner .banner-text { max-width: 64em; }
+  .top-banner .banner-text b { color: #fff; font-weight: 900; }
+  .top-banner .banner-go { font-weight: 900; white-space: nowrap; }
+  @keyframes banner-shift {
+    from { background-position: 0% 50%; }
+    to   { background-position: 100% 50%; }
+  }
+
   /*  Header / nav  */
   .site-head {
     position: sticky; top: 0; z-index: 50;
@@ -371,10 +408,12 @@
   @media (max-width: 760px) {
     .table-hint { display: block; }
     .hero h1 { font-size: 26px; }
+    .top-banner { font-size: 13.5px; padding: 10px 14px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .product, .btn { transition: none; }
+    .top-banner { animation: none; }
   }
   </style>
 <script async src="https://stat.re/js/pa-5tbcsTS0qaqBXy0dLGHf6.js"></script>
@@ -384,6 +423,15 @@
 </script>
 </head>
 <body>
+
+<a class="top-banner" href="https://esim.sb" target="_blank" rel="noopener"
+   aria-label="欢迎访问 eSIM.sb —— 专注 eSIM 交流的论坛（在新窗口打开）">
+  <span class="wrap banner-inner">
+    <span class="banner-tag">eSIM.sb 论坛</span>
+    <span class="banner-text">欢迎访问 <b>eSIM.sb</b>，eSIM.sb 是一个专注于 eSIM 交流的论坛，以及 eSIM 的优惠套餐、eSIM 使用经验、eSIM 转实体卡的使用分享。</span>
+    <span class="banner-go">立即前往 →</span>
+  </span>
+</a>
 
 <header class="site-head">
   <div class="wrap bar">
